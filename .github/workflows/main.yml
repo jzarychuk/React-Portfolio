@@ -1,0 +1,33 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy
+    runs-on: macos-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          cd react-portfolio
+          npm install
+
+      - name: Build application
+        run: |
+          cd react-portfolio
+          npm run build
+
+      - name: Deploy files to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: react-portfolio/build/
