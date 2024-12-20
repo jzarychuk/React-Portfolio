@@ -58,3 +58,12 @@
   font-size: 1rem;
   color: black;
 }
+
+.project-card__tags-grid {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  display: flex;
+  margin-top: 1rem;
+}
