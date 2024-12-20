@@ -1,6 +1,7 @@
 import './ProjectCard.css';
+import ProjectTag from './ProjectTag.js';
 
-function ProjectCard({ image, title, date, description, link }) {
+function ProjectCard({ image, title, date, description, link, tags }) {
   return (
     <a
       className="project-link"
@@ -16,6 +17,11 @@ function ProjectCard({ image, title, date, description, link }) {
           <h1 className="project-card__title">{title}</h1>
           <h2 className='project-card__date'>{date}</h2>
           <p className="project-card__description">{description}</p>
+          <div className="project-card__tags-grid">
+            {tags.map((tag, index) => (
+              <ProjectTag key={index} label={tag.label} color={tag.color} />
+            ))}
+          </div>
         </div>
       </div>
     </a>
