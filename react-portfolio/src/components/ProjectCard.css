@@ -8,8 +8,8 @@
   overflow: hidden;
   border: 1px solid #dfdedb;
   border-radius: 0.625rem;
-  width: 23.75rem;
-  height: 31.25rem;
+  text-align: center;
+  aspect-ratio: 3 / 4;
 }
 
 .project-card__upper {
