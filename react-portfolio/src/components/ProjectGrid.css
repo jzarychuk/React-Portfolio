@@ -1,23 +1,7 @@
 .project-grid {
-    justify-content: center;
-    gap: 2rem;
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 20rem); /* 3 cards per row */
-    max-width: calc(3 * 20rem + 4 * 2rem); /* Width of 3 cards + 2 gaps + 2 paddings */
-    padding: 2rem;
-  }
-  
-  @media (max-width: calc(3 * 20rem + 4 * 2rem)) {
-    .project-grid {
-      grid-template-columns: repeat(2, 20rem); /* 2 cards per row */
-      max-width: calc(2 * 20rem + 3 * 2rem); /* Width of 2 cards + 1 gap + 2 paddings */
-    }
-  }
-  
-  @media (max-width: calc(2 * 20rem + 3 * 2rem)) {
-    .project-grid {
-      grid-template-columns: repeat(1, 20rem); /* 1 card per row */
-      max-width: calc(20rem + 2 * 2rem); /* Width of 1 card + 2 paddings */
-    }
-  }
+  justify-content: center;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  padding: 2rem;
+}

@@ -1,4 +1,4 @@
-function ProjectTag ({ label, color }) {
+function ProjectTag({ label, color }) {
   const tagStyle = {
     display: 'inline-block',
     border: `2px solid ${color}`,
@@ -6,7 +6,7 @@ function ProjectTag ({ label, color }) {
     padding: '0.25rem 0.75rem',
     backgroundColor: 'white',
     fontSize: '1rem',
-    fontWeight: 'bold', 
+    fontWeight: 'bold',
     color: color,
   };
 
