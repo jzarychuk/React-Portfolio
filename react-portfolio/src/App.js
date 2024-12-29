@@ -23,7 +23,9 @@ function App() {
   }, []);
 
   return (
-    <ProjectGrid projects={projects} />
+    <div className="projects-section">
+      <ProjectGrid projects={projects} />
+    </div>
   );
 }
 
