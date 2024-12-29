@@ -1,7 +1,7 @@
 import './ProjectGrid.css';
 import ProjectCard from './ProjectCard.js';
 
-function ProjectGrid ({ projects }) {
+function ProjectGrid({ projects }) {
   return (
     <div className="project-grid">
       {projects.map((project) => (
